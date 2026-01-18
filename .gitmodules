@@ -1,0 +1,6 @@
+[submodule "settleasy"]
+	path = settleasy
+	url = https://github.com/progressive-bytes/settleasy.git
+[submodule "checkomat"]
+	path = checkomat
+	url = https://github.com/progressive-bytes/checkomat.git
