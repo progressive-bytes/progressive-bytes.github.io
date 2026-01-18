@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Progressive Bytes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content-container {
+            max-width: 800px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 28px;
+            padding: 40px;
+            margin: 20px auto;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            text-align: left;
+        }
+        h2 { margin-top: 30px; font-size: 1.4rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 8px; }
+        p, li { line-height: 1.6; color: var(--text-color); }
+        .contact-info {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 25px;
+            border-radius: 18px;
+            margin: 20px 0;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .contact-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-link:hover { text-decoration: underline; }
+        .back-link { display: inline-block; margin-top: 20px; color: var(--accent-color); text-decoration: none; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+        <p class="subtitle">Smart Apps. Done Right.</p>
+    </header>
+
+    <main class="content-container">
+        <section>
+            <h2>Get in Touch</h2>
+            <p>Have questions, feedback, or feature requests regarding our apps? Reach out to us and we'll get back to you promptly.</p>
+        </section>
+        
+        <section class="contact-info">
+            <p>
+                <strong>Progressive Bytes</strong><br>
+                Nils Anspach<br>
+                c/o Postflex #3191<br>
+                Emsdettener Str. 10<br>
+                48268 Greven<br>
+                Germany
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Phone:</strong> <a href="tel:+4925715403212" class="contact-link">+49 2571 5403212</a><br>
+                <strong>E-mail:</strong> <a href="mailto:contact@progressive-bytes.com" class="contact-link">contact@progressive-bytes.com</a>
+            </p>
+        </section>
+        <section>
+            <h2>Support & Feedback</h2>
+            <p>To help us assist you better with technical issues, please include:</p>
+            <ul>
+                <li>The name of our App</li>
+                <li>Device model and OS version</li>
+                <li>A brief description of the issue or your feature request</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025-2026 Progressive Bytes. All rights reserved.</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </footer>
+</body>
+</html>
