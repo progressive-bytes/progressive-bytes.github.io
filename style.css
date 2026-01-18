@@ -1,0 +1,168 @@
+:root {
+    --bg-color-top: #ffffff;
+    --bg-color-bottom: #e8f0f7;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --text-color: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent-color: #0071e3;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, var(--bg-color-top) 0%, var(--bg-color-bottom) 100%);
+    background-attachment: fixed;
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    margin: 80px 20px 60px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    letter-spacing: -0.01em;
+}
+
+.app-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+/* --- KARTEN STRUKTUR --- */
+
+.app-card {
+    width: 300px;
+    display: flex;
+    position: relative; /* Wichtig für das Overlay */
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-card-inner {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 28px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    z-index: 1;
+}
+
+/* Unsichtbarer Link über die gesamte Karte (für die App-Webseite) */
+.card-link-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 2;
+    border-radius: 28px;
+}
+
+.app-card:hover .app-card-inner {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* --- INHALTE --- */
+
+.app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 22.5%;
+    margin-bottom: 25px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Schiebt den Badge nach unten */
+}
+
+/* --- BADGE BEREICH --- */
+
+.badge-container {
+    margin-top: auto;
+    z-index: 3; /* Liegt über dem Overlay, damit der Store-Link klickbar ist */
+    position: relative;
+}
+
+.download-cta-badge {
+    height: 40px;
+    transition: transform 0.2s ease;
+    display: block;
+}
+
+.download-cta-badge:hover {
+    transform: scale(1.06);
+}
+
+/* --- FOOTER --- */
+
+footer {
+    margin-top: auto;
+    padding: 60px 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+footer nav {
+    margin-top: 15px;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- MOBILE OPTIMIERUNG --- */
+
+@media (max-width: 600px) {
+    header { margin: 40px 20px; }
+    h1 { font-size: 2.2rem; }
+    .subtitle { font-size: 1.1rem; }
+    .app-card { width: 100%; max-width: 320px; }
+    .app-grid { gap: 20px; }
+}
