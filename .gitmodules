@@ -1,6 +1,12 @@
 [submodule "settleasy"]
 	path = settleasy
 	url = https://github.com/progressive-bytes/settleasy.git
+	ignore = dirty
 [submodule "checkomat"]
 	path = checkomat
 	url = https://github.com/progressive-bytes/checkomat.git
+	ignore = dirty
+[submodule "budgetbear"]
+	path = budgetbear
+	url = https://github.com/progressive-bytes/budgetbear.git
+	ignore = dirty
