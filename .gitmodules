@@ -10,3 +10,6 @@
 	path = budgetbear
 	url = https://github.com/progressive-bytes/budgetbear.git
 	ignore = dirty
+[submodule "commentreflow"]
+	path = commentreflow
+	url = https://github.com/progressive-bytes/commentreflow.git
